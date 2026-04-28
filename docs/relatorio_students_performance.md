@@ -132,20 +132,34 @@ eng_dados/
 │       ├── silver.ipynb                   ← Camada Silver
 │       └── gold.ipynb                     ← Camada Gold
 └── docs/
-    └── relatorio_students_performance.md  ← Este relatório
+    ├── gerar_pdf.py                        ← Script de geração do PDF
+    ├── relatorio_students_performance.md  ← Este relatório
+    └── relatorio_students_performance.pdf ← PDF gerado pelo script
 ```
 
 ### Dependências (`requirements.txt`)
 
-| Pacote      | Versão mínima | Finalidade                         |
-| ----------- | ------------- | ---------------------------------- |
-| `pandas`    | 2.0.0         | Manipulação e análise de dados     |
-| `numpy`     | 1.24.0        | Operações numéricas                |
-| `jupyter`   | 1.0.0         | Ambiente de notebooks              |
-| `nbconvert` | 7.0.0         | Execução e conversão dos notebooks |
-| `ipykernel` | 6.0.0         | Kernel Python para Jupyter         |
+| Pacote       | Versão mínima | Finalidade                         |
+| ------------ | ------------- | ---------------------------------- |
+| `pandas`     | 2.0.0         | Manipulação e análise de dados     |
+| `numpy`      | 1.24.0        | Operações numéricas                |
+| `jupyter`    | 1.0.0         | Ambiente de notebooks              |
+| `nbconvert`  | 7.0.0         | Execução e conversão dos notebooks |
+| `ipykernel`  | 6.0.0         | Kernel Python para Jupyter         |
+| `markdown`   | 3.5.0         | Conversão de Markdown para HTML    |
+| `weasyprint` | 60.0          | Geração de PDF a partir de HTML    |
 
 > `sqlite3` já está incluso na biblioteca padrão do Python — não requer instalação separada.
+
+### Gerar o PDF
+
+Com o ambiente virtual ativado, execute a partir da raiz do projeto:
+
+```bash
+python docs/gerar_pdf.py
+```
+
+O script (`docs/gerar_pdf.py`) lê o arquivo Markdown deste relatório, converte para HTML via `markdown` e gera o PDF via `weasyprint`. O PDF é salvo em `docs/relatorio_students_performance.pdf`.
 
 ---
 

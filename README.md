@@ -71,13 +71,15 @@ Ao final da execução, o arquivo `data/data_lakehouse.db` conterá todas as tab
 
 ## Dependências
 
-| Pacote      | Versão mínima | Finalidade                          |
-| ----------- | ------------- | ----------------------------------- |
-| `pandas`    | 2.0.0         | Manipulação de dados                |
-| `numpy`     | 1.24.0        | Operações numéricas                 |
-| `jupyter`   | 1.0.0         | Ambiente de notebooks               |
-| `nbconvert` | 7.0.0         | Execução dos notebooks via terminal |
-| `ipykernel` | 6.0.0         | Kernel Python para Jupyter          |
+| Pacote       | Versão mínima | Finalidade                          |
+| ------------ | ------------- | ----------------------------------- |
+| `pandas`     | 2.0.0         | Manipulação de dados                |
+| `numpy`      | 1.24.0        | Operações numéricas                 |
+| `jupyter`    | 1.0.0         | Ambiente de notebooks               |
+| `nbconvert`  | 7.0.0         | Execução dos notebooks via terminal |
+| `ipykernel`  | 6.0.0         | Kernel Python para Jupyter          |
+| `markdown`   | 3.5.0         | Conversão de Markdown para HTML     |
+| `weasyprint` | 60.0          | Geração de PDF a partir de HTML     |
 
 > `sqlite3` faz parte da biblioteca padrão do Python e não requer instalação separada.
 
@@ -87,3 +89,13 @@ O relatório completo com contexto, arquitetura, resultados e validação de hip
 
 - [`docs/relatorio_students_performance.md`](docs/relatorio_students_performance.md)
 - [`docs/relatorio_students_performance.pdf`](docs/relatorio_students_performance.pdf)
+
+## Gerar o PDF
+
+Com o ambiente virtual ativado, execute a partir da raiz do projeto:
+
+```bash
+python docs/gerar_pdf.py
+```
+
+O script lê [`docs/relatorio_students_performance.md`](docs/relatorio_students_performance.md) e sobrescreve [`docs/relatorio_students_performance.pdf`](docs/relatorio_students_performance.pdf). As dependências `markdown` e `weasyprint` já estão declaradas no `requirements.txt`.
