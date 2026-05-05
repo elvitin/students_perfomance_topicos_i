@@ -1,7 +1,11 @@
-pandas>=2.0.0
-numpy>=1.24.0
 jupyter>=1.0.0
 nbconvert>=7.0.0
 ipykernel>=6.0.0
 markdown>=3.5.0
 weasyprint>=60.0
+pandas==3.0.2
+numpy
+matplotlib==3.10.9
+seaborn==0.13.2
+plotly==6.7.0
+nbformat==5.10.4
