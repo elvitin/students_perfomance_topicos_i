@@ -207,3 +207,9 @@ marimo/_lsp/
 __marimo__/
 data/clients_products_sells_dataset/data_lakehouse.db
 data/data_lakehouse.db
+.vscode/mcp.json
+
+
+# MLFlow
+mlruns/
+mlruns.db
